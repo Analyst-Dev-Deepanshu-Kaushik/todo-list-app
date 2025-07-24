@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List App</title>
+  <link rel="icon" href="to-do-list.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="app desktop" id="app">
+    <header class="top-bar">
+      <h1>📝 To-Do List</h1>
+      <div class="actions">
+        <select id="deviceSelector">
+          <option value="desktop">Desktop</option>
+          <option value="tablet">Tablet</option>
+          <option value="mobile">Mobile</option>
+        </select>
+        <button id="themeToggle" aria-label="Toggle Theme">🌙</button>
+      </div>
+    </header>
+
+    <section class="todo-input">
+      <input type="text" id="taskInput" placeholder="Enter a new task..." />
+      <button id="addBtn">Add</button>
+    </section>
+
+    <nav class="filters" aria-label="Task Filters">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="pending">Pending</button>
+      <button data-filter="completed">Completed</button>
+      <button data-filter="cancelled">Cancelled</button>
+    </nav>
+
+    <ul id="taskList" aria-live="polite"></ul>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
